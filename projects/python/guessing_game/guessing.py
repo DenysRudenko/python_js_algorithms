@@ -62,6 +62,7 @@ if play.lower() == 'yes' or play.lower() == 'y':
             # we stop the game if user run out of chances
             if chances == 0:
                 print(f'Hell no! You are out of chances! The correct number was {num}')
+                break
 
 else:
     print('Maybe next time!')
