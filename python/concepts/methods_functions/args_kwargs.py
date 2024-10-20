@@ -51,3 +51,5 @@ def my_func_seven(*args, **kwargs):
     print('I would like {} {}'.format(args[2], kwargs['animals']))
 
 my_func_seven(10, 20, 30, fruit='orange', food='eggs', animals='cats')
+
+
