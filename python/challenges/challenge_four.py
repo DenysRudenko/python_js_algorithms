@@ -48,4 +48,34 @@ print(makes_twenty(20, 10))
 print(makes_twenty(12, 8))
 print(makes_twenty(2, 3))
 
+print('-' * 20)
 
+
+# level 1 problems
+
+# OLD MACDONALD: Write a function that capitalizes the first and fourth letters of a  
+# old_macdonald('macdonald') --> MacDonald
+# macdonald'.capitalize() returns 'Macdonald'
+
+def old_macdonald(name):
+    return name[0].upper() + name[1:3]  + name[3].upper() + name[4:]
+
+
+print(old_macdonald('macdonald'))
+print('-' * 20)
+
+
+# MASTER YODA: Given a sentence, return a sentence with the words reversed
+# master_yoda('I am home') --> 'home am I'
+# master_yoda('We are ready') --> 'ready are We'
+
+def master_yoda(text):
+    string = text.split()
+    # lst = list(reversed(string))
+    string.reverse()
+
+    return " ".join(string)
+
+
+print(master_yoda("I am home"))
+print(master_yoda("We are ready"))
