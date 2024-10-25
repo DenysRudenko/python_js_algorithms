@@ -79,3 +79,32 @@ def master_yoda(text):
 
 print(master_yoda("I am home"))
 print(master_yoda("We are ready"))
+print('-' * 20)
+
+
+# ALMOST THERE: Given an integer n, return True if n is within 10 of either 100 or 200
+# almost_there(90) --> True
+# almost_there(104) --> True
+# almost_there(150) --> False
+# almost_there(209) --> True
+# abs(num) returns the absolute value of a number
+
+def almost_there(n):
+    if abs(n - 100) <= 10 or abs(n - 200) <= 10:
+        return True
+    else:
+        return False
+
+print(almost_there(90))
+print(almost_there(104))
+print(almost_there(150))
+print(almost_there(209))
+
+
+# Level 2 Problems
+# FIND 33:
+# Given a list of ints, return True if the array contains a 3 next to a 3 somewhere.
+
+# has_33([1, 3, 3]) → True
+# has_33([1, 3, 1, 3]) → False
+# has_33([3, 1, 3]) → False
