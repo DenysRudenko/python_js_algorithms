@@ -34,7 +34,7 @@ print(animal_crackers("Crazy Cangaroo"))
 
 print('-' * 20)
 
-# MAKES TWENTY: Given two integers, return True if the sum of the integers is 20 or if one of the integers is 20. If not, return False
+# MAKES TWENTY: Given two integers, return True if the total_sum of the integers is 20 or if one of the integers is 20. If not, return False
 
 def makes_twenty(n1, n2):
 
@@ -142,3 +142,31 @@ def paper_doll(text):
 
 print(paper_doll('Hello'))
 print(paper_doll('Mississippi'))
+
+print('-' * 20)
+
+
+# BLACKJACK: Given three integers between 1 and 11, if their total_sum is less than or equal to 21, return their total_sum. 
+# If their total_sum exceeds 21 and there's an eleven, reduce the total total_sum by 10. Finally, if the total_sum (even after adjustment) exceeds 21, return 'BUST'
+# blackjack(5,6,7) --> 18
+# blackjack(9,9,9) --> 'BUST'
+# blackjack(9,9,11) --> 19
+
+def black_jack(a, b, c):
+    total_sum = a + b + c
+
+    if total_sum <= 21:
+        return total_sum
+    elif total_sum > 21 and (a == 11 or b == 11 or c == 11):
+        total_sum -= 10
+
+    if total_sum > 21:
+        return 'BUST'
+    else:
+        return total_sum
+        
+    
+
+print(black_jack(5, 6, 7))
+print(black_jack(9, 9, 9))
+print(black_jack(9, 9, 11))
