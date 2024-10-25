@@ -99,6 +99,8 @@ print(almost_there(90))
 print(almost_there(104))
 print(almost_there(150))
 print(almost_there(209))
+print('-' * 20)
+
 
 
 # Level 2 Problems
@@ -108,3 +110,20 @@ print(almost_there(209))
 # has_33([1, 3, 3]) → True
 # has_33([1, 3, 1, 3]) → False
 # has_33([3, 1, 3]) → False
+
+def has_33(nums):
+  
+    for i in range(len(nums) - 1):
+        if nums[i] == 3 and nums[i + 1] == 3:
+            return True
+        
+    return False
+
+
+print(has_33([1, 3, 3]))
+print(has_33([1, 3, 1, 3]))
+print(has_33([3, 1, 3]))
+print(has_33([3, 1, 3, 1, 3, 3]))
+
+
+print('-' * 20)
