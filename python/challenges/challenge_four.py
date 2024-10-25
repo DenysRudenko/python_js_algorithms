@@ -194,9 +194,38 @@ def summer_69(arr):
     return total
 
 
- 
-
 print(summer_69([]))
 print(summer_69([1, 3, 5]))
 print(summer_69([4, 5, 6, 7, 8, 9]))
 print(summer_69([2, 1, 6, 9, 11]))
+print('-' * 21)
+
+
+# CHALLENGING PROBLEMS
+# SPY GAME: Write a function that takes in a list of integers and returns True if it contains 007 in order
+#  spy_game([1,2,4,0,0,7,5]) --> True
+#  spy_game([1,0,2,4,0,5,7]) --> True
+#  spy_game([1,7,2,0,4,5,0]) --> False
+
+
+def spy_game(nums):
+    lst = [0, 0, 7]
+
+    for num in nums:
+        if num == lst[0]:
+            lst.pop(0)
+
+        if not lst:
+            return True
+
+    return False
+
+
+print(spy_game([0, 0, 7]))
+print(spy_game([1,2,4,0,0,7,5]))
+print(spy_game([1,0,2,4,0,5,7]))
+print(spy_game([1,7,2,0,4,5,0]))
+
+
+
+
