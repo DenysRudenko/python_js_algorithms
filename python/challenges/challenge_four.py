@@ -256,4 +256,66 @@ def count_primes(num):
   
 
 print(count_primes(100))
+print('-' * 21)
 
+
+# Just for fun:
+# PRINT BIG: Write a function that takes in a single letter, and returns a 5x5 representation of that letter
+# print_big('a')
+
+# out:   *  
+#       * *
+#      *****
+#      *   *
+#      *   *
+# HINT: Consider making a dictionary of possible patterns, and mapping the alphabet to specific 5-line combinations of patterns.
+# For purposes of this exercise, it's ok if your dictionary stops at "E".
+
+
+def print_big(letter):
+    letter_dict = {
+        'A' : [
+            "  *  ",
+            " * * ",
+            "*****",
+            "*   *",
+            "*   *"
+        ],
+        'B': [
+            "**** ",
+            "*   *",
+            "**** ",
+            "*   *",
+            "**** "
+        ],
+        'C':[
+            " ****",
+            "*    ",
+            "*    ",
+            "*    ",
+            " ****"
+        ],
+        'D':[
+            "**** ",
+            "*   *",
+            "*   *",
+            "*   *",
+            "**** "
+        ],
+        'E':[
+            "*****",
+            "*",
+            "*****",
+            "*",
+            "*****"
+        ]
+    }
+
+    letter_dict = letter_dict.get(letter.upper(), ['Letter not avaliable'])
+
+    for char in letter_dict:
+        print(char)
+
+
+
+print(print_big('a'))
