@@ -69,3 +69,37 @@ def up_low(s):
 
 s = 'Hello Mr. Rogers, how are you this fine Tuesday?'
 up_low(s)
+
+print('-' * 21)
+
+
+
+# Write a Python function that takes a list and returns a new list with unique elements of the first list.
+
+# Sample List : [1,1,1,1,2,2,3,3,3,3,4,5]
+# Unique List : [1, 2, 3, 4, 5]
+
+def unique_list(lst):
+
+    print(set(lst))
+
+
+unique_list([1,1,1,1,2,2,3,3,3,3,4,5])
+
+print('-' * 21)
+
+# Write a Python function to multiply all the numbers in a list.
+
+# Sample List : [1, 2, 3, -4]
+# Expected Output : -24
+
+def multiply(numbers):
+
+    result = 1
+
+    for num in numbers:
+        result *= num
+    
+    return result
+
+print(multiply([1,2,3,-4]))
