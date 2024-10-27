@@ -52,6 +52,7 @@ if play.lower() == 'yes' or play.lower() == 'y':
             guesses.append(guess)
 
             chances -= 1
+
             print(f'You have {chances} chances left!')
 
             # check the correct number

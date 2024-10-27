@@ -145,7 +145,6 @@ def ispangram(str1, alphabet=string.ascii_lowercase):
     my_string = set(str1.replace(" ", "").lower())
     alpha_set = set(alphabet)
     
-
     return alpha_set.issubset(my_string)
 
 
