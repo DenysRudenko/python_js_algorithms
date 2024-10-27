@@ -33,10 +33,7 @@ print('-' * 21)
 
 def run_bool(num, low, high):
     
-    if num in range(low, high + 1):
-        return True
-    else:
-        return False
+    return num in range(low, high + 1)
 
 
 print(run_bool(3, 1, 10))
@@ -44,4 +41,31 @@ print(run_bool(11, 1, 10))
 print('-' * 21)
 
 
+# Write a Python function that accepts a string and calculates the number of upper case letters and lower case letters.
 
+# Sample String : 'Hello Mr. Rogers, how are you this fine Tuesday?'
+# Expected Output : 
+# No. of Upper case characters : 4
+# No. of Lower case Characters : 33
+# HINT: Two string methods that might prove useful: .isupper() and .islower()
+
+def up_low(s):
+    upper_counter = 0
+    lower_counter = 0
+
+    
+    for char in s:
+        if char.isupper():
+            upper_counter += 1
+        elif char.islower():
+            lower_counter += 1
+
+    message = f'Original String : {s}\nNo. of Upper case Characters : {upper_counter}\nNo. of Lower case Characters : {lower_counter}'
+    
+    print(message)
+
+
+
+
+s = 'Hello Mr. Rogers, how are you this fine Tuesday?'
+up_low(s)
