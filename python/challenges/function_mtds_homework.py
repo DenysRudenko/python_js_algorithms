@@ -116,6 +116,7 @@ print('-' * 21)
 
 
 def palindrome(s):
+    # getting rid of spaces
     my_string = ''.join(s.split())
 
     return my_string == my_string[::-1]
@@ -128,5 +129,24 @@ print(palindrome("racecar"))
 print(palindrome("nurses run"))
 print(palindrome("hello"))
 print(palindrome("cat"))
+print('-' * 21)
 
 
+# Write a Python function to check whether a string is pangram or not. 
+# (Assume the string passed in does not have any punctuation)
+
+# Note: Pangrams are words or sentences containing every letter of the alphabet at least once.
+# For example : "The quick brown fox jumps over the lazy dog"
+
+
+import string
+
+def ispangram(str1, alphabet=string.ascii_lowercase):
+    my_string = set(str1.replace(" ", "").lower())
+    alpha_set = set(alphabet)
+    
+
+    return alpha_set.issubset(my_string)
+
+
+print(ispangram("The quick brown fox jumps over the lazy dog"))
