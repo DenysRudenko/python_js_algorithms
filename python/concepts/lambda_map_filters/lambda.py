@@ -34,7 +34,6 @@ print(square_2(5))
 
 print(list(map(lambda num: num**2, my_nums)))
 
-
 print(list(filter(lambda num:num % 2 == 0, my_nums)))
 
 print(list(map(lambda name: name[::-1], names)))
