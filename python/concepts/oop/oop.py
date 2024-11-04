@@ -6,6 +6,8 @@ print(my_set)
 
 class Dog():
     
+    # Сlass object attribute
+    
     def __init__(self, breed, name, spots):
 
         # Attributes
