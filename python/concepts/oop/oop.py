@@ -68,3 +68,5 @@ class Triangle():
 triangle_area = Triangle()
 
 print(triangle_area.get_area())
+print("-" * 30)
+
