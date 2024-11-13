@@ -70,3 +70,49 @@ triangle_area = Triangle()
 print(triangle_area.get_area())
 print("-" * 30)
 
+
+class Human():
+
+    def __init__(self, name, surname, age, weight, height):
+        self.name = name
+        self.surname = surname
+        self.age = age
+        self.weight = weight
+        self.height = height
+
+    def ideal_weight_lorence(self):
+        return (self.height - 100) - (self.height - 152) * 0.2
+
+    def __str__(self):
+        ideal_weight = self.ideal_weight_lorence()
+        weight_difference = self.weight - ideal_weight
+        
+        return (f'Hello {self.name} {self.surname}, you are {self.age} years old! '
+                f'Your weight is {self.weight}kg and your height is {self.height}cm!\n'
+                f'Your ideal weight by Lorence formula is {ideal_weight:.2f}kg.\n'
+                f'You need to lose {weight_difference:.2f}kg!')
+    
+
+alex = Human("Alex", "Kravchenko", 25, 80, 180)
+
+print(alex)
+
+print("-" * 30)
+
+class Rectangle():
+
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+    
+    def calc_area(self):
+        return self.width * self.height
+    
+    def __str__(self):
+        return f'The area of rectangle is {self.calc_area()}'
+    
+
+new_rectange = Rectangle(200, 100)
+
+print(new_rectange)
+
